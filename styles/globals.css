@@ -1,0 +1,57 @@
+/* General styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --background-color: #effafa;
+  --main-color: #F2F2F2;
+  --second-color: #5CA5A5;
+  --third-color: #2B3939;
+  --font-color: #143642;
+  --font-family:  'League Spartan', sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+/* typography */
+h1 {
+  font-size: 13px;
+  color: var(--second-color);
+  font-weight: 700;
+  line-height: 12px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+/* main content */
+header {
+  height: 156px;
+  background: var(--second-color) url(../public/bg-header-mobile.svg);
+}
+
+/* card styles */
+
+.card {
+  box-shadow: 0px 15px 20px -5px #0D718226;
+  width: 87.2%;
+}
+
+.left-border {
+  border-left: 5px solid var(--second-color);
+}
