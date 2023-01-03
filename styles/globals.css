@@ -55,3 +55,64 @@ header {
 .left-border {
   border-left: 5px solid var(--second-color);
 }
+
+@media(min-width: 1027px) {
+
+  /* typography */
+
+:root {
+  font-size: 16px;
+}
+h1 {
+  font-size: 18px;
+  line-height: 16.56px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+.posting--info {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.14px;
+}
+
+/* card styles */
+  .card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 29.33px 29.33px 29.33px;
+    grid-template-areas: 
+      "img company--info . "
+      "img position tags"
+      "img info . ";
+    row-gap: 10px;
+  }
+
+  .logo {
+    grid-area: img;
+    place-self: center;
+  }
+
+  .company--info {
+    grid-area: company--info;
+  }
+
+  .position {
+    grid-area: position;
+  }
+
+  .info {
+    grid-area: info;
+  }
+
+  .tags {
+    grid-area: tags;
+    place-self: end;
+    width: 400px;
+  }
+
+
+}

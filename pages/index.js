@@ -76,7 +76,9 @@ export default function Home({ companies }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="mb-[56px]"></header>
+      <header className="mb-[56px]">
+        
+      </header>
       <main className='flex flex-col items-center w-full'>
         {/* {use filter function to display cards that should be shown} */}
         {/* {map over data to display cards} */ companiesMap}
