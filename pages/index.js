@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Card from "../components/Card";
 import { gql, GraphQLClient } from "graphql-request";
+import SearchBar from "../components/SearchBar";
+import { useState, useEffect } from "react";
 // make getStaticProps query
 
 export const getStaticProps = async () => {
@@ -44,12 +46,19 @@ export const getStaticProps = async () => {
 };
 
 export default function Home({ companies }) {
-  console.log(companies);
+  // console.log(companies);
+  const [search, setSearch] = useState(false)
+  // const [clicked, setclicked] = useState(false)
+  // useEffect(() => {
+    
+  // }, [clicked])
   const companiesMap = companies.map((company) => {
-    // const [id, companyName, contract, featured, location, isNew, position, postedAt, role, level, languages, tools]
+    //console.log(company.id)
     return (
       <Card
-        key={company.id}
+        key={companies.id}
+        search={search}
+        setSearch={setSearch}
         companyName={company.companyName}
         contract={company.contract}
         featured={company.featured}
@@ -76,10 +85,10 @@ export default function Home({ companies }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="mb-[56px]">
-        
+      <header className={`flex justify-center w-full ${search ? "mb-[140px]" : ""}`}>
+        { search ? <SearchBar companies={companies}/> : ""}
       </header>
-      <main className='flex flex-col items-center w-full'>
+      <main className='flex flex-col items-center w-full '>
         {/* {use filter function to display cards that should be shown} */}
         {/* {map over data to display cards} */ companiesMap}
         {/* {pass state down to cards as props} */}

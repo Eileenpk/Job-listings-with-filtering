@@ -1,5 +1,7 @@
 // Card component all data is passed down as props from index.js
 export default function Card({
+  search,
+  setSearch,
   companyName,
   contract,
   featured,
@@ -16,13 +18,13 @@ export default function Card({
   // put all items in an array
   const tagsArray = [role, level, ...languages, ...tools]; 
 // map over the array of items to display each as div
-  const tagsArrayMap = tagsArray.map(item => {
+  const tagsArrayMap = tagsArray.map((item, index) => {
     return (
-      <div className='search-item pl-[8px] pr-[8px] h-[32px] mt-4 bg-tag-background-color flex items-center justify-center rounded-[4px] text-second-color font-bold leading-6 tracking-[-0.12px]'>{item}</div>
+      <div key={index} className='search-item pl-[8px] pr-[8px] h-[32px] mt-4 bg-tag-background-color flex items-center justify-center rounded-[4px] text-second-color font-bold leading-6 tracking-[-0.12px]' onClick={() => setSearch(true)}>{item}</div>
     )
   })
   return (
-    <section className={`relative h-64 max-md:pt-8 lg:pt-8 lg:pb-8 lg:pl-10 pl-6 pr-6 mb-[40px] rounded-[5px] card bg-white-color lg:h-[152px] lg:mb-6 lg:max-w-[1110px] ${featured ? 'left-border' : ''} `}>
+    <section className={`relative  h-64 max-md:pt-8 lg:pt-8 lg:pb-8 lg:pl-10 pl-6 pr-6 mb-[40px] rounded-[5px] card bg-white-color lg:h-[152px] lg:mb-6 lg:max-w-[1110px] ${featured ? 'left-border' : ''} ${!search ? 'mt-[56px]' : ''} `}>
       {/* {used <img> tag and not <Image/> tag because of svg format of images. (avoids dangerouslyallowsvg err )} */}
       <img src={logo.url} alt={`${companyName} logo`} className=' logo max-md:absolute max-md:top-[-24px] w-12 h-12 lg:w-[88px] lg:h-[88px] ' />
 
