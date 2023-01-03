@@ -52,10 +52,6 @@ header {
   width: 87.2%;
 }
 
-.search-bar{
-  margin-top: 140px;
-}
-
 .left-border {
   border-left: 5px solid var(--second-color);
 }

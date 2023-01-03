@@ -47,11 +47,10 @@ export const getStaticProps = async () => {
 
 export default function Home({ companies }) {
   // console.log(companies);
+  // set search state to display search bar
   const [search, setSearch] = useState(false)
-  // const [clicked, setclicked] = useState(false)
-  // useEffect(() => {
-    
-  // }, [clicked])
+ // state to pass into filter function
+  const [itemsArray, setItemsArray] = useState([])
   const companiesMap = companies.map((company) => {
     //console.log(company.id)
     return (
@@ -59,6 +58,8 @@ export default function Home({ companies }) {
         key={companies.id}
         search={search}
         setSearch={setSearch}
+        setItemsArray={setItemsArray}
+        itemsArray={itemsArray}
         companyName={company.companyName}
         contract={company.contract}
         featured={company.featured}
@@ -85,8 +86,13 @@ export default function Home({ companies }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={`flex justify-center w-full ${search ? "mb-[140px]" : ""}`}>
-        { search ? <SearchBar companies={companies}/> : ""}
+      <header className={`flex justify-center w-full ${search ? 'mb-[140px]' : ""}`}>
+        { search ? <SearchBar 
+          companies={companies}
+          setSearch={setSearch}
+          setItemsArray={setItemsArray}
+          itemsArray={itemsArray}
+          /> : ""}
       </header>
       <main className='flex flex-col items-center w-full '>
         {/* {use filter function to display cards that should be shown} */}
