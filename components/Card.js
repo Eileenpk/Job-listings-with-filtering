@@ -1,6 +1,5 @@
 // Card component all data is passed down as props from index.js
 import filter from "./utils/filter";
-import { useState } from "react";
 export default function Card({
   search,
   setSearch,
@@ -20,18 +19,25 @@ export default function Card({
   logo,
 }) {
 
-  // onclick function
-  const handleClick = (item) => {
+  // onclick function to add tags to search bar
+  const handleClickAddTagsToSearch = (item) => {
     setSearch(true) 
-    setItemsArray(prevItem => [...prevItem, item])
-    filter(itemsArray)
+    setItemsArray(prevItem => {
+      // add item to the itemsArray
+      const unfilteredItems = [...prevItem, item]
+      // filter out duplicates in itemsArray.
+      const removeDuplicates = unfilteredItems.filter((item, index) => unfilteredItems.indexOf(item) === index);
+      // return items array with no duplicates
+      return [...removeDuplicates]
+    })
+  
   }
   // put all items in an array
   const tagsArray = [role, level, ...languages, ...tools]; 
 // map over the array of items to display each as div
   const tagsArrayMap = tagsArray.map((item, index) => {
     return (
-      <div key={index} className='search-item pl-[8px] pr-[8px] h-[32px] mt-4 bg-tag-background-color flex items-center justify-center rounded-[4px] text-second-color font-bold leading-6 tracking-[-0.12px]' onClick={() => handleClick(item)}>{item}</div>
+      <div key={index} className='search-item pl-[8px] pr-[8px] h-[32px] mt-4 bg-tag-background-color flex items-center justify-center rounded-[4px] text-second-color font-bold leading-6 tracking-[-0.12px]' onClick={() => handleClickAddTagsToSearch(item)}>{item}</div>
     )
   })
   return (
