@@ -21,6 +21,7 @@ export default function Card({
 
   // onclick function to add tags to search bar
   const handleClickAddTagsToSearch = (item) => {
+    console.log(item)
     setSearch(true) 
     setItemsArray(prevItem => {
       // add item to the itemsArray

@@ -55,7 +55,7 @@ export default function Home({ companies }) {
     //console.log(company.id)
     return (
       <Card
-        key={companies.id}
+        key={company.id}
         search={search}
         setSearch={setSearch}
         setItemsArray={setItemsArray}
