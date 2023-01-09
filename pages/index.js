@@ -83,7 +83,8 @@ export default function Home({ companies }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={`flex justify-center w-full mb-[56px] ${search ? 'mb-[141px]' : ""}`}>
+      <header className={`flex flex-col items-center w-full ${search ? '' : ""}`}>
+      <div className="w-full header--img"></div>
         { search ? <SearchBar 
           companies={companies}
           setSearch={setSearch}
@@ -91,7 +92,7 @@ export default function Home({ companies }) {
           itemsArray={itemsArray}
           /> : ""}
       </header>
-      <main className='flex flex-col items-center w-full '>
+      <main className='flex flex-col items-center w-full'>
         {companiesMap}
       </main>
     </>

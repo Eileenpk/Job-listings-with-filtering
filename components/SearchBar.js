@@ -46,7 +46,7 @@ export default function SearchBar({ setSearch, setItemsArray, itemsArray }) {
   return (
     <div
       role="search"
-      className=" search-bar mt-[120px] w-[89%] max-w-[1110px] bg-white min-h-[120px] h-fit rounded-[5px] flex justify-between p-[20px] ">
+      className=" search-bar mt-[-36px] w-[89%] max-w-[1110px] bg-white min-h-[120px] h-fit rounded-[5px] flex justify-between p-[20px] ">
         <div className="flex flex-wrap gap-[16px]">
             {searchArray}
         </div>
