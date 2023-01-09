@@ -25,12 +25,12 @@ Users should be able to:
 
 ### Screenshot
 
-![screen shot of full screen webpage]()
-![screen shot of mobile webpage]()
+![screen shot of full screen webpage](https://github.com/Eileenpk/Job-listings-with-filtering/blob/main/public/fullWebsite.png)
+![screen shot of mobile webpage](https://github.com/Eileenpk/Job-listings-with-filtering/blob/main/public/mobile.png)
 ### Links
 
 - Solution URL: [GitHub](https://github.com/Eileenpk/Job-listings-with-filtering)
-- Live Site URL: [live site]()
+- Live Site URL: [live site](https://job-listings-with-filtering-two-omega.vercel.app/)
 
 ### Built with
 
