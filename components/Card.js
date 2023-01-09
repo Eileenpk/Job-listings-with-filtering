@@ -51,6 +51,7 @@ export default function Card({
   // if no tags are selected show all cards, if any tags are selected only show matches
   if (itemsArray.length === 0 || match) {
     return (
+      
       <section
         className={`relative h-64 max-md:pt-8 lg:pt-8 lg:pb-8 lg:pl-10 pl-6 pr-6 mb-[40px] rounded-[5px] card bg-white-color lg:h-[152px] lg:mb-6 lg:max-w-[1110px] ${
           featured ? "left-border" : ""
