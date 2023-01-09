@@ -34,13 +34,12 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- Tailwind
+- [Semantic HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) - HTML5 with clear and descriptive tags for better accessibility and search engine optimization
+- [Tailwind](https://tailwindcss.com/) - A utility-first CSS framework
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Next.js](https://nextjs.org/) - React framework
-- Fetch API
-
+- [Hygraph](https://hygraph.com/?utm_term=hygraph&utm_campaign=EN_GL_Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=2816788452&hsa_cam=17743993835&hsa_grp=141602476209&hsa_ad=610084431591&hsa_src=g&hsa_tgt=kwd-1681477926128&hsa_kw=hygraph&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAiAh9qdBhAOEiwAvxIok7wujPe6u4Yr_SHDEo7jDeTH_zY-secZeffcygXkLzV4QdiGofXGnRoCWHkQAvD_BwE)
 ## Author
 
 - Frontend Mentor - [@Eileenpk](https://www.frontendmentor.io/profile/Eileenpk)

@@ -39,10 +39,24 @@ h2 {
   line-height: 24px;
 }
 
+.clear-btn {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  color:#7C8F8F;
+  letter-spacing: -0.12px;
+  line-height: 24px;
+}
 /* main content */
 header {
   height: 156px;
   background: var(--second-color) url(../public/bg-header-mobile.svg);
+}
+
+/* search-bar */
+.search-bar {
+  box-shadow: 0px 15px 20px -5px #0D718226;
+  margin-bottom: 20%;
 }
 
 /* card styles */
@@ -54,6 +68,29 @@ header {
 
 .left-border {
   border-left: 5px solid var(--second-color);
+}
+
+/* Enable hover only on non-touch devices */
+ @media (hover: hover) and (pointer: fine) {
+  .clear-btn:hover {
+    color: var(--second-color);
+    cursor: pointer;
+  }
+  
+  .remove-btn:hover  {
+    background: #2b3939;
+    cursor: pointer;
+  }
+
+  .company-tag:hover {
+    background-color: var(--second-color);
+    color: var(--background-color);
+    cursor: pointer;
+  }
+  
+  .position:hover {
+    color:var(--second-color);
+  }
 }
 
 @media(min-width: 1027px) {
@@ -113,6 +150,5 @@ h2 {
     place-self: end;
     width: 400px;
   }
-
 
 }
