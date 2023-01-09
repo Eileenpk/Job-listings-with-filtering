@@ -1,5 +1,6 @@
 // Card component all data is passed down as props from index.js
 export default function Card({
+  search,
   setSearch,
   setItemsArray,
   itemsArray,
@@ -55,7 +56,9 @@ export default function Card({
       <section
         className={`relative h-64 max-md:pt-8 lg:pt-8 lg:pb-8 lg:pl-10 pl-6 pr-6 mb-[40px] rounded-[5px] card bg-white-color lg:h-[152px] lg:mb-6 lg:max-w-[1110px] ${
           featured ? "left-border" : ""
-        } `}
+        } ${
+          !search ? "mt-[56px]" : ""
+        }`}
       >
         {/* {used <img> tag and not <Image /> tag because of svg format of images. (avoids dangerouslyallowsvg err )} */}
         <img
