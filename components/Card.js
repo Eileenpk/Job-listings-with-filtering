@@ -48,7 +48,7 @@ export default function Card({
   });
   
   // true or false value to see if selected tags are in the cards tag list.
-  const match = tagsArray.some((i) => itemsArray.includes(i));
+  const match = itemsArray.every((i) => tagsArray.includes(i));
   // if no tags are selected show all cards, if any tags are selected only show matches
   if (itemsArray.length === 0 || match) {
     return (
